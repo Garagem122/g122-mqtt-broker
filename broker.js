@@ -12,7 +12,7 @@ broker.on('clientConnected', function(client) {
 
 broker.on('published', function (packet, client) {
 	if (packet.topic.indexOf('clients') < 0) {
-		var payload = bufferToString(packet.payload)
+		var payload = bufferToString(packet.payload);
 		console.log('Published:', payload);
 	}
 });
